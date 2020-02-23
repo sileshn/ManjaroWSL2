@@ -2,7 +2,7 @@
 Fedora on WSL2 (Windows 10 builds 18917 or higher)
 based on [wsldl](https://github.com/yuk7/wsldl)
 
-![screenshot](https://raw.githubusercontent.com/yosukes-dev/FedoraWSL2/img/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/yosukes-dev/FedoraWSL2/master/img/screenshot.png)
 
 [![Github All Releases](https://img.shields.io/github/downloads/yosukes-dev/FedoraWSL2/total.svg?style=flat-square)](https://github.com/yosukes-dev/FedoraWSL2/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
