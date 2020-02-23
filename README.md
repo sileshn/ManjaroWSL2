@@ -1,29 +1,34 @@
-# CentWSL
-CentOS on WSL (Windows 10 FCU or later)
+# FedoraWSL2
+Fedora on WSL2 (Windows 10 builds 18917 or higher)
 based on [wsldl](https://github.com/yuk7/wsldl)
 
-![screenshot](https://raw.githubusercontent.com/wiki/yuk7/wsldl/img/Cent_Arch_Alpine.png)
-[![Build Status](https://img.shields.io/travis/yuk7/CentWSL.svg?style=flat-square)](https://travis-ci.org/yuk7/CentWSL)
-[![Github All Releases](https://img.shields.io/github/downloads/yuk7/CentWSL/total.svg?style=flat-square)](https://github.com/yuk7/CentWSL/releases)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-![License](https://img.shields.io/github/license/yuk7/CentWSL.svg?style=flat-square)
+![screenshot](https://raw.githubusercontent.com/yosukes-dev/FedoraWSL2/img/screenshot.png)
 
-### [Download](https://github.com/yuk7/CentWSL/releases)
+[![Github All Releases](https://img.shields.io/github/downloads/yosukes-dev/FedoraWSL2/total.svg?style=flat-square)](https://github.com/yosukes-dev/FedoraWSL2/releases)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+![License](https://img.shields.io/github/license/yosukes-dev/FedoraWSL2.svg?style=flat-square)
+
+### [Download](https://github.com/yosukes-dev/FedoraWSL2/releases)
 
 
 ## Requirements
-* Windows 10 Fall Creators Update x64 or later.
+* Windows 10 builds 18917 or higher. (Testing with build 19551)
 * Windows Subsystem for Linux feature is enabled.
 
 ## Install
-#### 1. [Download](https://github.com/yuk7/CentWSL/releases) installer zip
+#### 1. [Download](https://github.com/yosukes-dev/FedoraWSL2/releases) installer zip
 
 #### 2. Extract all files in zip file to same directory
 
-#### 3.Run CentOS.exe to Extract rootfs and Register to WSL
+#### 3.Run Fedora.exe to Extract rootfs and Register to WSL
 Exe filename is using to the instance name to register.
 If you rename it you can register with a diffrent name and have multiple installs.
 
+## Important
+If the default version of WSL is 1, convert it with the following command.
+```dos
+wsl --set-version Fedora 2
+```
 
 ## How-to-Use(for Installed Instance)
 #### exe Usage
@@ -64,6 +69,6 @@ Usage :
 
 #### How to uninstall instance
 ```dos
->CentOS.exe clean
+>Fedora.exe clean
 
 ```
