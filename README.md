@@ -4,6 +4,7 @@ based on [wsldl](https://github.com/yuk7/wsldl)
 
 ![screenshot](https://raw.githubusercontent.com/yosukes-dev/FedoraWSL2/master/img/screenshot.png)
 
+[![CircleCI](https://circleci.com/gh/yosukes-dev/FedoraWSL2.svg?style=svg)](https://circleci.com/gh/yosukes-dev/FedoraWSL2)
 [![Github All Releases](https://img.shields.io/github/downloads/yosukes-dev/FedoraWSL2/total.svg?style=flat-square)](https://github.com/yosukes-dev/FedoraWSL2/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![License](https://img.shields.io/github/license/yosukes-dev/FedoraWSL2.svg?style=flat-square)
