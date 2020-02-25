@@ -1,15 +1,15 @@
-# FedoraWSL2
+# FedoraWSL
 Fedora on WSL2 (Windows 10 builds 18917 or higher)
 based on [wsldl](https://github.com/yuk7/wsldl)
 
-![screenshot](https://raw.githubusercontent.com/yosukes-dev/FedoraWSL2/master/img/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/yosukes-dev/FedoraWSL/master/img/screenshot.png)
 
-[![CircleCI](https://circleci.com/gh/yosukes-dev/FedoraWSL2.svg?style=svg)](https://circleci.com/gh/yosukes-dev/FedoraWSL2)
-[![Github All Releases](https://img.shields.io/github/downloads/yosukes-dev/FedoraWSL2/total.svg?style=flat-square)](https://github.com/yosukes-dev/FedoraWSL2/releases)
+[![CircleCI](https://circleci.com/gh/yosukes-dev/FedoraWSL.svg?style=svg)](https://circleci.com/gh/yosukes-dev/FedoraWSL2)
+[![Github All Releases](https://img.shields.io/github/downloads/yosukes-dev/FedoraWSL/total.svg?style=flat-square)](https://github.com/yosukes-dev/FedoraWSL/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-![License](https://img.shields.io/github/license/yosukes-dev/FedoraWSL2.svg?style=flat-square)
+![License](https://img.shields.io/github/license/yosukes-dev/FedoraWSL.svg?style=flat-square)
 
-### [Download](https://github.com/yosukes-dev/FedoraWSL2/releases)
+### [Download](https://github.com/yosukes-dev/FedoraWSL/releases)
 
 
 ## Requirements
@@ -17,7 +17,7 @@ based on [wsldl](https://github.com/yuk7/wsldl)
 * Windows Subsystem for Linux feature is enabled.
 
 ## Install
-#### 1. [Download](https://github.com/yosukes-dev/FedoraWSL2/releases) installer zip
+#### 1. [Download](https://github.com/yosukes-dev/FedoraWSL/releases) installer zip
 
 #### 2. Extract all files in zip file to same directory
 
