@@ -56,3 +56,4 @@ clean:
 	-rm rootfs.tar.gz
 	-sudo rm -r rootfs
 	-rm base.tar
+	-docker rmi library/fedora:31
