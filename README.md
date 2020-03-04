@@ -1,5 +1,5 @@
 # FedoraWSL
-Fedora on WSL2 (Windows 10 builds 18917 or higher)
+Fedora on WSL (Windows 10 FCU or later)
 based on [wsldl](https://github.com/yuk7/wsldl)
 
 ![screenshot](https://raw.githubusercontent.com/yosukes-dev/FedoraWSL/master/img/screenshot.png)
@@ -13,7 +13,8 @@ based on [wsldl](https://github.com/yuk7/wsldl)
 
 
 ## Requirements
-* Windows 10 builds 18917 or higher. (Testing with build 19551)
+* Windows 10  Fall Creators Update x64 or later. 
+(Testing environment => WSL: build 18363, WSL2: build 19551)
 * Windows Subsystem for Linux feature is enabled.
 
 ## Install
@@ -25,8 +26,8 @@ based on [wsldl](https://github.com/yuk7/wsldl)
 Exe filename is using to the instance name to register.
 If you rename it you can register with a diffrent name and have multiple installs.
 
-## Important
-If the default version of WSL is 1, convert it with the following command.
+## (Option)
+If you want to use WSL2, convert it with the following command.
 ```dos
 wsl --set-version Fedora 2
 ```
