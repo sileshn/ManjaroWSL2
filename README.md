@@ -5,7 +5,7 @@ Manjaro on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yu
 [![Github All Releases](https://img.shields.io/github/downloads/sileshn/ManjaroWSL/total.svg?style=flat-square)](https://github.com/sileshn/ManjaroWSL/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![License](https://img.shields.io/github/license/yosukes-dev/FedoraWSL.svg?style=flat-square)
 
-## 💻 Requirements
+## Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
 * For ARM64 systems: Version 2004 or higher, with Build 19041 or higher.
 * Builds lower than 18362 do not support WSL 2.
@@ -21,23 +21,18 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 For more details, check [this](https://docs.microsoft.com/en-us/windows/wsl/install-win10) microsoft document.
 
-## Install
-1. [Download](https://github.com/sileshn/ManjaroWSL/releases/latest) installer zip
-2. Extract all files in zip file to same directory
-3. Run Manjaro.exe to Extract rootfs and Register to WSL
-
-**Note:**
-Exe filename is using the instance name to register. If you rename it you can register with a diffrent name and have multiple installs.
-
-If you want to use WSL2 after install, convert it with the following command.
-```dos
-wsl --set-version Manjaro 2
-```
-
-You can also set wsl2 as default. Use the command below before running Manjaro.exe.
+## How to install
+* Make sure all the steps mentioned under "Requirements" are completed.
+* Set wsl2 as default. Run the command below in a windows cmd terminal.
 ```dos
 wsl --set-default-version 2
 ```
+* [Download](https://github.com/sileshn/ManjaroWSL/releases/latest) installer zip.
+* Extract all files in zip file to same directory.
+* Run Manjaro.exe to Extract rootfs and Register to WSL
+
+**Note:**
+Exe filename is using the instance name to register. If you rename it, you can register with a different name and have multiple installs.
 
 ## How-to-Use(for Installed Instance)
 #### exe Usage
@@ -110,7 +105,6 @@ Usage :
 ```
 
 ## How to setup
-
 Open Manjaro.exe and run the following commands.
 ```dos
 passwd
@@ -130,9 +124,7 @@ Execute the command below in a windows cmd terminal from the directory where Man
 ```
 
 ## How to build
-
 #### Prerequisites
-
 Docker, tar, zip, unzip need to be installed.
 
 ```dos
@@ -148,7 +140,6 @@ make clean
 ```
 
 ## How to run docker in ManjaroWSL without using docker desktop
-
 Install docker.
 ```dos
 sudo pacman -S docker
