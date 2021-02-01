@@ -34,8 +34,21 @@ wsl --set-default-version 2
 **Note:**
 Exe filename is using the instance name to register. If you rename it, you can register with a different name and have multiple installs.
 
-## How-to-Use(for Installed Instance)
-#### exe Usage
+## How to setup
+Open Manjaro.exe and run the following commands.
+```dos
+passwd
+useradd -m -G wheel -s /bin/bash <username>
+passwd <username>
+exit
+```
+Execute the command below in a windows cmd terminal from the directory where Manjaro.exe is installed.
+```dos
+>Manjaro.exe config --default-user <username>
+```
+
+## How to use installed instance
+#### exe usage
 ```
 Usage :
     <no args>
@@ -73,7 +86,7 @@ Usage :
       - Print this usage message.
 ```
 
-#### Just Run exe
+#### Run exe
 ```cmd
 >{InstanceName}.exe
 [root@PC-NAME user]#
@@ -85,13 +98,13 @@ Usage :
 4.4.0-43-Microsoft
 ```
 
-#### Run with command line with path translation
+#### Run with command line using path translation
 ```cmd
 >{InstanceName}.exe runp echo C:\Windows\System32\cmd.exe
 /mnt/c/Windows/System32/cmd.exe
 ```
 
-#### Change Default User(id command required)
+#### Change default user(id command required)
 ```cmd
 >{InstanceName}.exe config --default-user user
 
@@ -104,27 +117,14 @@ Usage :
 >{InstanceName}.exe config --default-term wt
 ```
 
-## How to setup
-Open Manjaro.exe and run the following commands.
-```dos
-passwd
-useradd -m -G wheel -s /bin/bash <username>
-passwd <username>
-exit
-```
-Execute the command below in a windows cmd terminal from the directory where Manjaro.exe is installed.
-```dos
->Manjaro.exe config --default-user <username>
-```
-
 ## How to uninstall instance
 ```dos
 >Manjaro.exe clean
 
 ```
 
-## How to build
-#### Prerequisites
+## How to build from source
+#### prerequisites
 Docker, tar, zip, unzip need to be installed.
 
 ```dos
