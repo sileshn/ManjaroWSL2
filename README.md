@@ -1,7 +1,7 @@
 # ManjaroWSL
 Manjaro on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yuk7/wsldl).
 
-[![Screenshot-2021-01-13-125803.png](https://i.postimg.cc/RC1WHM7Y/Screenshot-2021-01-13-125803.png)](https://postimg.cc/7b6PvrQ1)
+[![Screenshot-2021-02-12-142406.png](https://i.postimg.cc/3xr9JHR0/Screenshot-2021-02-12-142406.png)](https://postimg.cc/0b37cF79)
 [![Github All Releases](https://img.shields.io/github/downloads/sileshn/ManjaroWSL/total.svg?style=flat-square)](https://github.com/sileshn/ManjaroWSL/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![License](https://img.shields.io/github/license/yosukes-dev/FedoraWSL.svg?style=flat-square)
 
