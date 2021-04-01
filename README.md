@@ -47,6 +47,8 @@ Execute the command below in a windows cmd terminal from the directory where Man
 >Manjaro.exe config --default-user <username>
 ```
 
+Set up your choice of pacman mirrors before you proceed using ManjaroWSL. More information on how to use pacman-mirrors is available [here](https://wiki.manjaro.org/index.php/Pacman-mirrors).
+
 ## How to use installed instance
 #### exe usage
 ```
