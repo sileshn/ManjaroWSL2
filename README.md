@@ -80,8 +80,8 @@ Usage :
     backup [contents]
       - `--tgz`: Output backup.tar.gz to the current directory using tar command
       - `--reg`: Output settings registry file to the current directory
-
-    clean
+	  
+	clean
       - Uninstall the distro.
 
     help
@@ -122,6 +122,19 @@ Usage :
 ## How to uninstall instance
 ```dos
 >Manjaro.exe clean
+
+```
+
+## How to backup instance
+```dos
+>Manjaro.exe backup
+
+```
+
+## How to restore instance
+```dos
+>Manjaro.exe clean
+>Manjaro.exe install backup.tar.gz
 
 ```
 
