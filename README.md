@@ -132,9 +132,17 @@ Usage :
 ```
 
 ## How to restore instance
+
+There are 2 ways to do it. 
+
+Rename the backup to rootfs.tar.gz and run Manjaro.exe
+
+(or)
+
 ```dos
 >Manjaro.exe clean
 >Manjaro.exe install backup.tar.gz
+>Manjaro.exe --default-uid 1000
 
 ```
 
