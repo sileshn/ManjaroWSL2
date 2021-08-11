@@ -123,6 +123,19 @@ Usage :
 >{InstanceName}.exe config --default-term wt
 ```
 
+## How to update
+Updating Manjaro doesn't require you to download and install a newer release everytime. Usually all it takes is to run the command below to update the instance.
+```dos
+$sudo pacman -Syu
+```
+
+Sometimes updates may fail to install. You can try the command below in such a situation.
+```dos
+$sudo pacman -Syyuu
+```
+
+You may need to install a newer release if additional features have been added/removed from the installer.
+
 ## How to uninstall instance
 ```dos
 >Manjaro.exe clean
