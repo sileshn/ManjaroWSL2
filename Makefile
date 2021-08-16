@@ -1,4 +1,4 @@
-OUT_ZIP=Manjaro.zip
+OUT_ZIP=ManjaroWSL.zip
 LNCR_EXE=Manjaro.exe
 
 DLR=curl
