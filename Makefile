@@ -3,7 +3,7 @@ LNCR_EXE=Manjaro.exe
 
 DLR=curl
 DLR_FLAGS=-L
-LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21082201/icons.zip
+LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21082800/icons.zip
 LNCR_ZIP_EXE=Manjaro.exe
 
 all: $(OUT_ZIP)
