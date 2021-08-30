@@ -1,12 +1,12 @@
 {
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
-    "version": "20210822",
+    "version": "20210830",
     "description": "Install Manjaro as a WSL Instance",
     "homepage": "https://github.com/sileshn/ManjaroWSL",
     "license": "MIT",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
-    "url": "https://github.com/sileshn/ManjaroWSL/releases/download/20210822/ManjaroWSL.zip",
-    "hash": "96a852c44d88beafabac33094dd4aff52e80ad3e37b91a4691bb3a902f67db1a",
+    "url": "https://github.com/sileshn/ManjaroWSL/releases/download/20210830/ManjaroWSL.zip",
+    "hash": "811b8c1980b2b72346f6d355e97ace7cc2bcce39ecc3349ab284a4a257d81006",
     "post_install": [
         "$installable = $true",
         "$user = [Security.Principal.WindowsIdentity]::GetCurrent() -as [Security.Principal.WindowsPrincipal]",
