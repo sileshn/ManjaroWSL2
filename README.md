@@ -84,6 +84,9 @@ Usage :
     backup [contents]
       - `--tar`: Output backup.tar to the current directory.
       - `--reg`: Output settings registry file to the current directory.
+	  - `--tgz`: Output backup.tar.tar to the current directory.
+      - `--vhdx`: Output backup.ext4.vhdx to the current directory.
+      - `--vhdxgz`: Output backup.ext4.vhdx.gz to the current directory.
 
     clean
       - Uninstall that instance.
@@ -143,9 +146,13 @@ You may need to install a newer release if additional features have been added/r
 ```
 
 ## How to backup instance
-```dos
->Manjaro.exe backup
-
+export to backup.tar.gz
+```cmd
+>Manjaro.exe backup --tgz
+```
+export to backup.ext4.vhdx.gz
+```cmd
+>Manjaro.exe backup --vhdxgz
 ```
 
 ## How to restore instance
@@ -156,11 +163,18 @@ Rename the backup to rootfs.tar.gz and run Manjaro.exe
 
 (or)
 
-```dos
->Manjaro.exe clean
+.tar(.gz)
+```cmd
 >Manjaro.exe install backup.tar.gz
->Manjaro.exe --default-uid 1000
+```
+.ext4.vhdx(.gz)
+```cmd
+>Manjaro.exe install backup.ext4.vhdx.gz
+```
 
+You may need to run the command below in some circumstances.
+```cmd
+>Manjaro.exe --default-uid 1000
 ```
 
 ## How to build from source
