@@ -31,6 +31,12 @@ wsl --set-default-version 2
 * Extract all files in zip file to same directory.
 * Run Manjaro.exe to Extract rootfs and Register to WSL
 
+Alternatively, you can use [Scoop](https://scoop.sh/):
+```dos
+scoop bucket add extras
+scoop install manjarowsl
+```
+
 **Note:**
 Exe filename is using the instance name to register. If you rename it, you can register with a different name and have multiple installs.
 
@@ -138,6 +144,11 @@ $sudo pacman -Syyuu
 ```
 
 You may need to install a newer release if additional features have been added/removed from the installer.
+
+If you have used Scoop to install Manjaro, you can use it to update to a newer release.
+```dos
+scoop update manjarowsl
+```
 
 ## How to uninstall instance
 ```dos
