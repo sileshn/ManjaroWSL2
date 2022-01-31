@@ -5,6 +5,9 @@ Manjaro on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yu
 [![Github All Releases](https://img.shields.io/github/downloads/sileshn/ManjaroWSL/total.svg?style=flat-square)](https://github.com/sileshn/ManjaroWSL/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License](https://img.shields.io/github/license/sileshn/ManjaroWSL.svg?style=flat-square)](https://github.com/sileshn/ManjaroWSL/blob/main/LICENSE)
 
+## Important information
+ManjaroWSL uses the testing branch by default. Please follow [this](https://wiki.manjaro.org/index.php/Switching_Branches) guide if you want to switch to another branch. I personally use the unstable branch and have not run into any issues so far.
+
 ## Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
 * For ARM64 systems: Version 2004 or higher, with Build 19041 or higher.
