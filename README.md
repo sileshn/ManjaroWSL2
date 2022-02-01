@@ -8,6 +8,7 @@ Manjaro on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yu
 ## Important information
 ManjaroWSL uses the testing branch by default. Please follow [this](https://wiki.manjaro.org/index.php/Switching_Branches) guide if you want to switch to another branch. I personally use the unstable branch and have not run into any issues so far.
 
+ManjaroWSL includes a wsl.conf file which only has [section headers](https://i.postimg.cc/MZ4DC1Fw/Screenshot-2022-02-02-071533.png). Users can use this file to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
 ## Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
 * For ARM64 systems: Version 2004 or higher, with Build 19041 or higher.
