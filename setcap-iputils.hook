@@ -1,0 +1,10 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Target = usr/sbin/ping
+
+[Action]
+Description = Adding capabilities to ping to allow non-root user to ping...
+When = PostTransaction
+Exec = /usr/sbin/setcap cap_net_raw+p /usr/sbin/ping
