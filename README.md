@@ -206,7 +206,7 @@ You may need to run the command below in some circumstances.
 
 ## How to build from source
 #### prerequisites
-Docker, tar, zip, unzip need to be installed.
+Docker, tar, zip, unzip, bsdtar need to be installed.
 
 ```dos
 git clone git@gitlab.com:sileshn/ManjaroWSL.git
