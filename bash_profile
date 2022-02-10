@@ -3,7 +3,7 @@
 ylw=$(tput setaf 3)
 txtrst=$(tput sgr0)
 
-echo -e "\033[33;7mDo not interrupt or close this window till script finishes execution and wsl shuts down!!!\033[0m"
+echo -e "\033[33;7mDo not interrupt or close the terminal window till script finishes execution!!!\033[0m"
 echo " "
 echo -e "\033[32mInitialize keyring & fasttrack mirrors\033[m"
 pacman-key --init
@@ -19,7 +19,8 @@ sed -i '/builder ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers
 echo -e "[automount]\n\n[network]\n\n[interop]\n\n[user]\n\n#The Boot setting is only available on Windows 11\n[boot]\n" >/etc/wsl.conf
 
 clear
-
+echo -e "\033[33;7mDo not interrupt or close the terminal window till script finishes execution!!!\033[0m"
+echo " "
 echo -e "\033[32mDo you want to create a new user?\033[m"
 select yn in "Yup" "Nope"; do
   case $yn in
