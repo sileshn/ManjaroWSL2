@@ -45,6 +45,8 @@ scoop install manjarowsl
 Exe filename is using the instance name to register. If you rename it, you can register with a different name and have multiple installs.
 
 ## How to setup
+ManjaroWSL will ask you to create a new user during its first run. If you choose to create a new user during the first run, the steps below are not required unless you want to create additional users.
+
 Open Manjaro.exe and run the following commands.
 ```dos
 passwd
