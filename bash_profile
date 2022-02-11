@@ -4,11 +4,12 @@ ylw=$(tput setaf 3)
 txtrst=$(tput sgr0)
 
 echo -e "\033[33;7mDo not interrupt or close the terminal window till script finishes execution!!!\033[0m"
+figlet -t Welcome to ManjaroWSL
 echo " "
-echo -e "\033[32mInitialize keyring & fasttrack mirrors\033[m"
-pacman-key --init
-pacman-key --populate
-pacman-mirrors --fasttrack 5
+echo -e "\033[32mInitializing keyring & fasttracking mirrors...\033[m"
+pacman-key --init >/dev/null 2>&1
+pacman-key --populate >/dev/null 2>&1
+pacman-mirrors --fasttrack 5 >/dev/null 2>&1
 setcap cap_net_raw+p /usr/sbin/ping
 rm /var/lib/dbus/machine-id
 dbus-uuidgen --ensure=/etc/machine-id
@@ -17,9 +18,6 @@ userdel builder
 rm -rf /builder
 sed -i '/builder ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers
 echo -e "[automount]\n\n[network]\n\n[interop]\n\n[user]\n\n#The Boot setting is only available on Windows 11\n[boot]\n" >/etc/wsl.conf
-
-clear
-echo -e "\033[33;7mDo not interrupt or close the terminal window till script finishes execution!!!\033[0m"
 echo " "
 echo -e "\033[32mDo you want to create a new user?\033[m"
 select yn in "Yup" "Nope"; do
@@ -46,7 +44,7 @@ select yn in "Yup" "Nope"; do
             sleep 1
           done
           rm ~/.bash_profile
-          cmd.exe /C wsl --shutdown
+          wsl.exe --terminate $WSL_DISTRO_NAME
         fi
       done
       ;;
