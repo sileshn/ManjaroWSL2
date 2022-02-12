@@ -1,10 +1,11 @@
 # First run script for ManjaroWSL.
 
+cmd.exe /C mode con:cols=140 lines=36
 ylw=$(tput setaf 3)
 txtrst=$(tput sgr0)
 
+figlet -w 140 Welcome to ManjaroWSL
 echo -e "\033[33;7mDo not interrupt or close the terminal window till script finishes execution!!!\033[0m"
-figlet -t Welcome to ManjaroWSL
 echo " "
 echo -e "\033[32mInitializing keyring & fasttracking mirrors...\033[m"
 pacman-key --init >/dev/null 2>&1
