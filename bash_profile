@@ -40,10 +40,12 @@ select yn in "Yup" "Nope"; do
           echo -en "\033[1A\033[1A\033[2K"
           username=""
         else
-          useradd -m -G wheel -s /bin/bash "$username"
+          useradd -m -g users -G wheel -s /bin/bash "$username"
+		  echo "%wheel ALL=(ALL) ALL" >/etc/sudoers.d/wheel
           echo -en "\033[1B\033[1A\033[2K"
           passwd $username
           sed -i "/\[user\]/a default = $username" /etc/wsl.conf >/dev/null
+		  echo " "
           secs=5
           while [ $secs -gt 0 ]; do
             printf ${ylw}"\r\033[KSystem needs to be restarted. Shutting down in %.d seconds."${txtrst} $((secs--))
