@@ -50,7 +50,8 @@ ManjaroWSL will ask you to create a new user during its first run. If you choose
 Open Manjaro.exe and run the following commands.
 ```dos
 passwd
-useradd -m -G wheel -s /bin/bash <username>
+useradd -m -g users -G wheel -s /bin/bash <username>
+echo "%wheel ALL=(ALL) ALL" >/etc/sudoers.d/wheel
 passwd <username>
 exit
 ```
