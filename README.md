@@ -1,7 +1,7 @@
 # ManjaroWSL
 Manjaro on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yuk7/wsldl).
 
-[![Screenshot-2021-02-12-142406.png](https://i.postimg.cc/3xr9JHR0/Screenshot-2021-02-12-142406.png)](https://postimg.cc/0b37cF79)
+<a href='http://postimg.cc/RJdwhjq5' target='_blank'><img src='https://i.postimg.cc/RJdwhjq5/Screenshot-2022-02-17-105245.png' border='0' alt='Screenshot-2022-02-17-105245'/></a> <a href='http://postimg.cc/vcg6pqdm' target='_blank'><img src='https://i.postimg.cc/vcg6pqdm/Screenshot-2022-02-17-125524.png' border='0' alt='Screenshot-2022-02-17-125524'/></a> <a href='http://postimg.cc/PNFwVG9c' target='_blank'><img src='https://i.postimg.cc/PNFwVG9c/Screenshot-2022-02-17-125501.png' border='0' alt='Screenshot-2022-02-17-125501'/></a> <a href='http://postimg.cc/67CcwbVw' target='_blank'><img src='https://i.postimg.cc/67CcwbVw/Screenshot-2022-02-17-111059.png' border='0' alt='Screenshot-2022-02-17-111059'/></a>
 [![Github All Releases](https://img.shields.io/github/downloads/sileshn/ManjaroWSL/total.svg?style=flat-square)](https://github.com/sileshn/ManjaroWSL/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License](https://img.shields.io/github/license/sileshn/ManjaroWSL.svg?style=flat-square)](https://github.com/sileshn/ManjaroWSL/blob/main/LICENSE)
 
