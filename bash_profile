@@ -23,7 +23,6 @@ dbus-uuidgen --ensure
 userdel builder
 rm -rf /builder
 sed -i '/builder ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers
-echo -e "[automount]\n\n[network]\n\n[interop]\n\n[user]\n\n#The Boot setting is only available on Windows 11\n[boot]\n" >/etc/wsl.conf
 echo " "
 echo -e "\033[32mDo you want to create a new user?\033[m"
 select yn in "Yup" "Nope"; do
