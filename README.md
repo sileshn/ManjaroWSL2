@@ -72,7 +72,7 @@ Execute the command below in a windows cmd terminal from the directory where Man
 >Manjaro.exe config --default-user <username>
 ```
 
-Set up your choice of pacman mirrors before you proceed using ManjaroWSL. Pacman is configured to use mirrors from Australia,Global,Germany,Sweden and United States by default. Switch to the country of your choice or all mirrors before you update. More information on how to use pacman-mirrors is available [here](https://wiki.manjaro.org/index.php/Pacman-mirrors).
+Set up pacman mirrors before you proceed using ManjaroWSL. Pacman is configured to use the Global mirror by default. Switch to the mirror/mirrors of your choice or reset to use all mirrors before you update. More information on how to use pacman-mirrors is available [here](https://wiki.manjaro.org/index.php/Pacman-mirrors).
 ```dos
 $sudo pacman-mirrors --country <name>
 $sudo pacman -Syu
