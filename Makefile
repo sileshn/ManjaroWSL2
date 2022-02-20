@@ -46,7 +46,7 @@ rootfs: base.tar
 
 base.tar:
 	@echo -e '\e[1;31mExporting base.tar using docker...\e[m'
-	docker run --net=host --name manjarowsl manjarolinux/base:latest /bin/bash -c "pacman-mirrors --fasttrack 5; pacman --noconfirm --needed -Sy awk; pacman-key --init; pacman-key --populate; sed -ibak -e 's/#Color/Color/g' -e 's/CheckSpace/#CheckSpace/g' /etc/pacman.conf; pacman --noconfirm -Syyu; pacman-mirrors -aS testing -c Global; pacman --noconfirm -Syyu; pacman --noconfirm -Rdd dbus; pacman --noconfirm --needed -Sy aria2 aspell base-devel ccache dbus-x11 dconf figlet git grep hspell hunspell hwdata inetutils iputils iproute2 keychain libvoikko linux-tools nano nuspell openssh procps sudo usbutils vi vim wget; mkdir -p /etc/pacman.d/hooks; echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel; yes | LC_ALL=en_US.UTF-8 pacman -Scc"
+	docker run --net=host --name manjarowsl manjarolinux/base:latest /bin/bash -c "pacman-mirrors --fasttrack 5; pacman --noconfirm --needed -Sy awk; pacman-key --init; pacman-key --populate; sed -ibak -e 's/#Color/Color/g' -e 's/CheckSpace/#CheckSpace/g' /etc/pacman.conf; pacman --noconfirm -Syyu; pacman-mirrors -aS testing -c Global; pacman --noconfirm -Syyu; pacman --noconfirm -Rdd dbus; pacman --noconfirm --needed -Sy aria2 aspell base-devel ccache dbus-x11 dconf figlet git grep hspell hunspell hwdata inetutils iputils iproute2 keychain libvoikko linux-tools lolcat nano nuspell openssh procps sudo usbutils vi vim wget; mkdir -p /etc/pacman.d/hooks; echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel; yes | LC_ALL=en_US.UTF-8 pacman -Scc"
 	docker export --output=base.tar manjarowsl
 	docker rm -f manjarowsl
 

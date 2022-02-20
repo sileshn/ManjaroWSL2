@@ -6,7 +6,7 @@ red=$(tput setaf 1)
 ylw=$(tput setaf 3)
 txtrst=$(tput sgr0)
 
-figlet -t -k -f /usr/share/figlet/fonts/mini.flf "Welcome to ManjaroWSL"
+figlet -t -k -f /usr/share/figlet/fonts/mini.flf "Welcome to ManjaroWSL" | lolcat
 echo -e "\033[33;7mDo not interrupt or close the terminal window till script finishes execution!!!\033[0m"
 echo " "
 
