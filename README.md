@@ -218,21 +218,22 @@ Docker, tar, zip, unzip, bsdtar need to be installed.
 git clone git@gitlab.com:sileshn/ManjaroWSL.git
 cd ManjaroWSL
 make
-
 ```
 Copy the Manjaro.zip file to a safe location and run the command below to clean.
 ```dos
 make clean
-
 ```
 
 ## How to run docker in ManjaroWSL without using docker desktop
 Install docker.
 ```dos
 sudo pacman -S docker
-
 ```
 
-Follow [this](https://blog.nillsf.com/index.php/2020/06/29/how-to-automatically-start-the-docker-daemon-on-wsl2/) blog post for further details on how to set it up.
-
-[![Screenshot-2021-01-27-175029.png](https://i.postimg.cc/Z5vGPXwn/Screenshot-2021-01-27-175029.png)](https://postimg.cc/fVZqDqnQ)
+Follow [this](https://blog.nillsf.com/index.php/2020/06/29/how-to-automatically-start-the-docker-daemon-on-wsl2/) blog post for further details on how to setup. Alternatively, if using systemd, use the commands below to setup and reboot.
+```dos
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
+sudo usermod -aG docker $USER
+```
+<a href='http://postimg.cc/grYsWc2v' target='_blank'><img src='https://i.postimg.cc/grYsWc2v/Screenshot-2022-05-09-232847.png' border='0' alt='Screenshot-2022-05-09-232847'/></a>
