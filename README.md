@@ -9,8 +9,9 @@ Manjaro on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yu
 ManjaroWSL has the following features during the installation stage.
 * Increase virtual disk size from the default 256GB
 * Create a new user and set the user as default
+* ManjaroWSL supports systemd using diddledani's [one-script-wsl2-systemd](https://github.com/diddledani/one-script-wsl2-systemd). You can do a minimal setup using [this](https://github.com/diddledani/one-script-wsl2-systemd#minimal-manual-installation) procedure.
+* ManjaroWSL includes a wsl.conf file which only has [section headers](https://i.postimg.cc/MZ4DC1Fw/Screenshot-2022-02-02-071533.png). Users can use this file to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
 
-ManjaroWSL includes a wsl.conf file which only has [section headers](https://i.postimg.cc/MZ4DC1Fw/Screenshot-2022-02-02-071533.png). Users can use this file to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
 ## Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
 * For ARM64 systems: Version 2004 or higher, with Build 19041 or higher.
