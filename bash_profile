@@ -136,7 +136,6 @@ select yn in "Yes" "No"; do
                     username=""
                 else
                     useradd -m -g users -G wheel -s /bin/bash "$username"
-                    echo "%wheel ALL=(ALL) ALL" >/etc/sudoers.d/wheel
                     echo -en "\033[1B\033[1A\033[2K"
                     passwd $username
                     sed -i "/\[user\]/a default = $username" /etc/wsl.conf >/dev/null
