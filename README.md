@@ -29,7 +29,7 @@ ManjaroWSL has the following features during the installation stage.
 	```cmd
 	dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 	```
-	* Download and install the latest Linux kernel update package from [here](https://www.catalog.update.microsoft.com/Search.aspx?q=wsl). Its a cab file. Open and 	extract the exe file within using 7zip/winzip/winrar.
+	* Download and install the latest Linux kernel update package from [here](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi).
 
 ## How to install
 * Make sure all the steps mentioned under "Requirements" are completed.
