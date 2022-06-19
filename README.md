@@ -1,16 +1,20 @@
-# ManjaroWSL
+# Disclaimer
+
+This project is in no way related to or created by the official Manjaro team or its members. It is solely a project of mine. Do not go around spamming the Manjaro forum if you come across any issues. You certainely won't receive any help. Mention your issues here and I'll try to find a solution.
+
+## ManjaroWSL2
 Manjaro on WSL2 (Windows 10 FCU or later) based on [wsldl](https://github.com/yuk7/wsldl).
 
 <a href='http://postimg.cc/jDB0gdQ2' target='_blank'><img src='https://i.postimg.cc/jDB0gdQ2/Screenshot-2022-02-21-162309.png' border='0' alt='Screenshot-2022-02-21-162309'/></a> <a href='http://postimg.cc/S2h04TPp' target='_blank'><img src='https://i.postimg.cc/S2h04TPp/Screenshot-2022-02-21-162326.png' border='0' alt='Screenshot-2022-02-21-162326'/></a> <a href='http://postimg.cc/Ppzg5bGv' target='_blank'><img src='https://i.postimg.cc/Ppzg5bGv/Screenshot-2022-02-21-162404.png' border='0' alt='Screenshot-2022-02-21-162404'/></a> <a href='http://postimg.cc/K4mXsWLP' target='_blank'><img src='https://i.postimg.cc/K4mXsWLP/Screenshot-2022-02-21-162919.png' border='0' alt='Screenshot-2022-02-21-162919'/></a> <a href='http://postimg.cc/LnscmZxh' target='_blank'><img src='https://i.postimg.cc/LnscmZxh/Screenshot-2022-02-21-162502.png' border='0' alt='Screenshot-2022-02-21-162502'/></a>  <a href='http://postimg.cc/vcg6pqdm' target='_blank'><img src='https://i.postimg.cc/vcg6pqdm/Screenshot-2022-02-17-125524.png' border='0' alt='Screenshot-2022-02-17-125524'/></a> <a href='http://postimg.cc/PNFwVG9c' target='_blank'><img src='https://i.postimg.cc/PNFwVG9c/Screenshot-2022-02-17-125501.png' border='0' alt='Screenshot-2022-02-17-125501'/></a> <a href='http://postimg.cc/67CcwbVw' target='_blank'><img src='https://i.postimg.cc/67CcwbVw/Screenshot-2022-02-17-111059.png' border='0' alt='Screenshot-2022-02-17-111059'/></a>
-[![Github All Releases](https://img.shields.io/github/downloads/sileshn/ManjaroWSL/total?logo=github&style=flat-square)](https://github.com/sileshn/ManjaroWSL/releases) [![SourceForge](https://img.shields.io/sourceforge/dt/manjarowsl?color=ff6700&logo=sourceforge&style=flat-square)](https://sourceforge.net/projects/manjarowsl/files/latest/download) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/sileshn/ManjaroWSL?display_name=release&label=latest%20release&style=flat-square)](https://github.com/sileshn/ManjaroWSL/releases/latest)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License](https://img.shields.io/github/license/sileshn/ManjaroWSL.svg?style=flat-square)](https://github.com/sileshn/ManjaroWSL/blob/main/LICENSE)
+[![Github All Releases](https://img.shields.io/github/downloads/sileshn/ManjaroWSL2/total?logo=github&style=flat-square)](https://github.com/sileshn/ManjaroWSL2/releases) [![GitHub release (latest by date)](https://img.shields.io/github/v/release/sileshn/ManjaroWSL2?display_name=release&label=latest%20release&style=flat-square)](https://github.com/sileshn/ManjaroWSL2/releases/latest)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![License](https://img.shields.io/github/license/sileshn/ManjaroWSL2.svg?style=flat-square)](https://github.com/sileshn/ManjaroWSL2/blob/main/LICENSE)
 
 ## Features and important information
-ManjaroWSL has the following features during the installation stage.
+ManjaroWSL2 has the following features during the installation stage.
 * Increase virtual disk size from the default 256GB
 * Create a new user and set the user as default
-* ManjaroWSL supports systemd using diddledani's [one-script-wsl2-systemd](https://github.com/diddledani/one-script-wsl2-systemd). You can do a minimal setup using [this](https://github.com/diddledani/one-script-wsl2-systemd#minimal-manual-installation) procedure.
-* ManjaroWSL includes a wsl.conf file which only has [section headers](https://i.postimg.cc/MZ4DC1Fw/Screenshot-2022-02-02-071533.png). Users can use this file to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
+* ManjaroWSL2 supports systemd using diddledani's [one-script-wsl2-systemd](https://github.com/diddledani/one-script-wsl2-systemd). You can do a minimal setup using [this](https://github.com/diddledani/one-script-wsl2-systemd#minimal-manual-installation) procedure.
+* ManjaroWSL2 includes a wsl.conf file which only has [section headers](https://i.postimg.cc/MZ4DC1Fw/Screenshot-2022-02-02-071533.png). Users can use this file to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
 
 ## Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
@@ -33,7 +37,7 @@ ManjaroWSL has the following features during the installation stage.
 
 ## How to install
 * Make sure all the steps mentioned under "Requirements" are completed.
-* [Download](https://github.com/sileshn/ManjaroWSL/releases/latest) installer zip
+* [Download](https://github.com/sileshn/ManjaroWSL2/releases/latest) installer zip
 * Extract all files in zip file to same directory
 * Set version 2 as default. Note that this step is required only for manual installation.
   ```dos
@@ -45,7 +49,7 @@ ManjaroWSL has the following features during the installation stage.
 Exe filename is using the instance name to register. If you rename it you can register with a diffrent name and have multiple installs.
 
 ## How to setup
-ManjaroWSL will ask you to create a new user during its first run. If you choose to create a new user during the first run, the steps below are not required unless you want to create additional users.
+ManjaroWSL2 will ask you to create a new user during its first run. If you choose to create a new user during the first run, the steps below are not required unless you want to create additional users.
 
 Open Manjaro.exe and run the following commands.
 ```dos
@@ -72,7 +76,7 @@ Execute the command below in a windows cmd terminal from the directory where Man
 >Manjaro.exe config --default-user <username>
 ```
 
-Set up pacman mirrors before you proceed using ManjaroWSL. Pacman is configured to use the Global mirror by default. Switch to the mirror/mirrors of your choice or reset to use all mirrors before you update. More information on how to use pacman-mirrors is available [here](https://wiki.manjaro.org/index.php/Pacman-mirrors).
+Set up pacman mirrors before you proceed using ManjaroWSL2. Pacman is configured to use the Global mirror by default. Switch to the mirror/mirrors of your choice or reset to use all mirrors before you update. More information on how to use pacman-mirrors is available [here](https://wiki.manjaro.org/index.php/Pacman-mirrors).
 ```dos
 $sudo pacman-mirrors --country <name>
 $sudo pacman -Syu
@@ -164,11 +168,6 @@ $sudo pacman -Syyuu
 
 You may need to install a newer release if additional features have been added/removed from the installer.
 
-If you have used Scoop to install Manjaro, you can use it to update to a newer release.
-```dos
-scoop update manjarowsl
-```
-
 ## How to uninstall instance
 ```dos
 >Manjaro.exe clean
@@ -212,8 +211,8 @@ You may need to run the command below in some circumstances.
 Docker, tar, zip, unzip, bsdtar need to be installed.
 
 ```dos
-git clone git@gitlab.com:sileshn/ManjaroWSL.git
-cd ManjaroWSL
+git clone git@gitlab.com:sileshn/ManjaroWSL2.git
+cd ManjaroWSL2
 make
 ```
 Copy the Manjaro.zip file to a safe location and run the command below to clean.
@@ -221,7 +220,7 @@ Copy the Manjaro.zip file to a safe location and run the command below to clean.
 make clean
 ```
 
-## How to run docker in ManjaroWSL without using docker desktop
+## How to run docker in ManjaroWSL2 without using docker desktop
 Install docker.
 ```dos
 sudo pacman -S docker
