@@ -11,12 +11,19 @@ txtrst=$(tput sgr0)
 diskvol=$(mount | grep -m1 ext4 | cut -f 1 -d " ")
 sudo resize2fs $diskvol >/dev/null 2>&1
 disksize=$(sudo blockdev --getsize64 $diskvol)
-osname=$(/mnt/c/Windows/System32/wbem/wmic.exe os get Caption | sed -n 2p)
+wslversion=$(wsl.exe --version | tr -d '\0' | sed -n 1p | cut -f3 -d " " | cut -f2-3 -d ".")
 width=$(echo $COLUMNS)
 
 if [ "$width" -gt 120 ]; then
     width=120
 fi
+
+if (($(echo $wslversion '<' 67.6|bc))); then
+	commandline="command = \"/usr/bin/env -i /usr/bin/unshare --fork --mount --propagation shared --mount-proc --pid -- sh -c 'mount -t binfmt_misc binfmt_misc /proc/sys/fs/binfmt_misc; [ -x /usr/lib/systemd/systemd ] && exec /usr/lib/systemd/systemd --unit=multi-user.target || exec /lib/systemd/systemd --unit=multi-user.target'\""
+else
+	commandline="systemd=true"
+fi
+echo "$commandline" >> /etc/wsl.conf
 
 test -e /mnt/c/Users/Public/vhdresize.txt && rm /mnt/c/Users/Public/vhdresize.txt
 test -e /mnt/c/Users/Public/shutdown.cmd && rm /mnt/c/Users/Public/shutdown.cmd
@@ -113,9 +120,6 @@ echo -e ${grn}"Initializing and populating keyring..."${txtrst}
 pacman-key --init >/dev/null 2>&1
 pacman-key --populate >/dev/null 2>&1
 setcap cap_net_raw+p /usr/sbin/ping
-rm /var/lib/dbus/machine-id
-dbus-uuidgen --ensure=/etc/machine-id
-dbus-uuidgen --ensure
 userdel builder
 rm -rf /builder
 sed -i '/builder ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers
