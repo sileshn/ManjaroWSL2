@@ -112,9 +112,7 @@ echo -e ${grn}"Initializing and populating keyring..."${txtrst}
 pacman-key --init >/dev/null 2>&1
 pacman-key --populate >/dev/null 2>&1
 setcap cap_net_raw+p /usr/sbin/ping
-userdel builder
-rm -rf /builder
-sed -i '/builder ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers
+getent passwd builder >/dev/null && (userdel builder && rm -rf /home/builder && sed -i '/builder ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers)
 
 echo -e ${grn}"Do you want to create a new user?"${txtrst}
 select yn in "Yes" "No"; do
