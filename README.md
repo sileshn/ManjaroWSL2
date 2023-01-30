@@ -18,6 +18,20 @@ ManjaroWSL2 has the following features during the installation stage.
 * ManjaroWSL2 Supports systemd natively if you are running wsl v0.67.6 (more details [here](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)) and above. For earlier versions of wsl, systemd is supported using diddledani's [one-script-wsl2-systemd](https://github.com/diddledani/one-script-wsl2-systemd). This is done automatically during initial setup.
 * ManjaroWSL2 includes a wsl.conf file which only has [section headers](https://i.postimg.cc/MZ4DC1Fw/Screenshot-2022-02-02-071533.png). Users can use this file to configure the distro to their liking. You can read more about wsl.conf and its configuration settings [here](https://docs.microsoft.com/en-us/windows/wsl/wsl-config).
 
+Users who are inclined to use pamac-cli as their package manager cannot use the version from Manjaro package repositories as you will end up with an authentication error. This is because pamac asks for password using the gui polkit. You can read more about this issuse [here](https://forum.manjaro.org/t/pamac-cli-asks-for-password-using-gui-polkit/51239) and [here](https://www.reddit.com/r/ManjaroLinux/comments/o0xo7k/how_to_make_pamac_ask_for_password_in_the_terminal/). This can be resolved by using a modified version of pamac. The same cannot be added to ManjaroWSL2 as it may infringe copyright. For those who are interested in details of how to go about making these changes, please check [this](https://www.reddit.com/r/ManjaroLinux/comments/o0xo7k/comment/h6vlihk/?utm_source=share&utm_medium=web2x&context=3) link. The same changes have been incorporated in [this](https://github.com/sileshn/pamac) repo and users who want to compile and use it can follow the steps mentioned below.
+```cmd
+sudo pacman -S --noconfirm --needed  asciidoc cmake git libhandy libnotify meson pamac-cli vala
+git clone https://github.com/sileshn/pamac.git
+cd pamac && mkdir build && cd build
+meson setup --prefix=/usr --sysconfdir=/etc --buildtype=release
+meson compile
+```
+The compiled binary will be saved in the `build/src` folder. You can now add an alias and let pamac know you are using the cli version by adding the following lines to your `.bashrc` file.
+```cmd
+export PAMAC_CLI_AUTH=1
+alias pamac='/home/<dir where pamac is cloned>/pamac/build/src/pamac'
+```
+
 ## Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
 * For ARM64 systems: Version 2004 or higher, with Build 19041 or higher.
