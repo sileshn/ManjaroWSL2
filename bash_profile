@@ -113,8 +113,6 @@ pacman-key --init >/dev/null 2>&1
 pacman-key --populate >/dev/null 2>&1
 setcap cap_net_raw+p /usr/sbin/ping
 getent passwd builder >/dev/null && (userdel builder && rm -rf /home/builder && sed -i '/builder ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers)
-sudo systemctl daemon-reload
-sudo systemctl enable wslg-init.service >/dev/null 2>&1
 
 echo -e ${grn}"Do you want to create a new user?"${txtrst}
 select yn in "Yes" "No"; do

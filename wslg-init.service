@@ -1,8 +1,0 @@
-[Unit]
-Description=Check and recreat wslg symlink
-
-[Service]
-ExecStart=/usr/bin/wslg-init.sh
-
-[Install]
-WantedBy=multi-user.target

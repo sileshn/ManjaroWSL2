@@ -42,8 +42,6 @@ rootfs: base.tar
 	sudo cp wsl.conf rootfs/etc/wsl.conf
 	sudo cp -f setcap-iputils.hook rootfs/etc/pacman.d/hooks/50-setcap-iputils.hook
 	sudo cp bash_profile rootfs/root/.bash_profile
-	sudo cp wslg-init.sh rootfs/usr/bin/wslg-init.sh
-	sudo cp wslg-init.service rootfs/usr/lib/systemd/system/wslg-init.service
 	sudo chmod +x rootfs
 
 base.tar:
