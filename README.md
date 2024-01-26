@@ -235,3 +235,46 @@ sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 ```
 [![Screenshot-2022-11-17-155326.png](https://i.postimg.cc/Pq7d43tN/Screenshot-2022-11-17-155326.png)](https://postimg.cc/5Hwc9mQM)
+
+## Setup desktop environment
+
+You need to follow the [official instructions](https://wiki.manjaro.org/index.php/Install_Desktop_Environments#KDE_Plasma_5) to setup desktop environment.
+
+Take Plasma 5 as an example, first install the desktop environment:
+```shell
+sudo pacman -S plasma kio-extras
+sudo systemctl enable sddm.service --force
+```
+
+Second, you need to install the xorg and xrdp.
+```shell
+pacman -S xorg xorg-server xrdp
+```
+xorgxrdp is in AUR so you can install it with yay or pamac.
+```shell
+yay -S xorgxrdp
+```
+Then you need to enable and start xrdp service.
+```shell
+sudo systemctl enable xrdp.service
+sudo systemctl start xrdp.service
+sudo systemctl reboot
+```
+[Refference](https://www.reddit.com/r/ManjaroLinux/comments/iu1mxb/manjaro_running_on_wsl_2_windows_subsystem_for/)
+
+After that, you will need to add below code to your ~/.xinitrc file.
+Create one if it doesn't exist.
+```shell
+#!/bin/sh
+/usr/lib/plasma-dbus-run-session-if-needed startplasma-x11
+```
+[Refference for this](https://wiki.archlinux.org/title/xrdp#Black_screen_with_a_desktop_environment)
+
+Finally, execute `ip addr | grep eth0` to get the IP address.
+
+You should be able to press `Win+R` and run `mstsc` to connect to your 
+
+RDP server with the ip:3389 as target input.
+
+Remember to select the `xvnc` option to log in, 
+you should be able to see the desktop after it.
