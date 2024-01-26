@@ -260,18 +260,18 @@ sudo systemctl enable xrdp.service
 sudo systemctl start xrdp.service
 sudo systemctl reboot
 ```
-[Refference](https://www.reddit.com/r/ManjaroLinux/comments/iu1mxb/manjaro_running_on_wsl_2_windows_subsystem_for/)
 
-After that, you will need to add below code to your ~/.xinitrc file.
-Create one if it doesn't exist.
+You will need to add below code to your ~/.xinitrc file. Create the file if it doesn't exist.
 ```shell
 #!/bin/sh
 /usr/lib/plasma-dbus-run-session-if-needed startplasma-x11
 ```
-[Refference for this](https://wiki.archlinux.org/title/xrdp#Black_screen_with_a_desktop_environment)
 
-Finally, execute `ip addr | grep eth0` to get the IP address.
+Finally, execute `ip addr | grep eth0` to get the IP address. You should be able to press `Win+R` and run `mstsc` to connect to your RDP server with the ip:3389 as target input. Remember to select the `xvnc` option to log in, you should be able to see the desktop after it.
 
-You should be able to press `Win+R` and run `mstsc` to connect to your RDP server with the ip:3389 as target input.
+Refer to the following links for more information.
 
-Remember to select the `xvnc` option to log in, you should be able to see the desktop after it.
+`https://www.reddit.com/r/ManjaroLinux/comments/iu1mxb/manjaro_running_on_wsl_2_windows_subsystem_for/`
+`https://wiki.archlinux.org/title/xrdp#Black_screen_with_a_desktop_environment`
+
+[![299938465-44a7d727-5383-40e9-bc86-6f5f6bd92043.png](https://i.postimg.cc/RZcBpWTw/299938465-44a7d727-5383-40e9-bc86-6f5f6bd92043.png)](https://postimg.cc/NKfS5fS0)
