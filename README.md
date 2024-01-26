@@ -236,7 +236,7 @@ sudo usermod -aG docker $USER
 ```
 [![Screenshot-2022-11-17-155326.png](https://i.postimg.cc/Pq7d43tN/Screenshot-2022-11-17-155326.png)](https://postimg.cc/5Hwc9mQM)
 
-## Setup desktop environment
+## How to setup a desktop environment
 
 You need to follow the [official instructions](https://wiki.manjaro.org/index.php/Install_Desktop_Environments#KDE_Plasma_5) to setup desktop environment.
 
@@ -272,9 +272,6 @@ Create one if it doesn't exist.
 
 Finally, execute `ip addr | grep eth0` to get the IP address.
 
-You should be able to press `Win+R` and run `mstsc` to connect to your 
+You should be able to press `Win+R` and run `mstsc` to connect to your RDP server with the ip:3389 as target input.
 
-RDP server with the ip:3389 as target input.
-
-Remember to select the `xvnc` option to log in, 
-you should be able to see the desktop after it.
+Remember to select the `xvnc` option to log in, you should be able to see the desktop after it.
