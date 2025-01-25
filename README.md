@@ -248,11 +248,11 @@ sudo systemctl enable sddm.service --force
 
 Second, you need to install the xorg and xrdp.
 ```shell
-pacman -S xorg xorg-server xrdp
+pacman -S xorg xorg-server
 ```
 xorgxrdp is in AUR so you can install it with yay or pamac.
 ```shell
-yay -S xorgxrdp
+yay -S xorgxrdp xrdp
 ```
 Then you need to enable and start xrdp service.
 ```shell
