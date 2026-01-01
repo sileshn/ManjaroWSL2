@@ -17,7 +17,7 @@ echo -e ${grn}"Initializing and populating keyring..."${txtrst}
 rm -rf /etc/pacman.d/gnupg; 
 pacman-key --init >/dev/null 2>&1
 pacman-key --populate >/dev/null 2>&1
-pacman --noconfirm --needed -Sy archlinux-keyring >/dev/null 2>&1
+pacman --noconfirm --needed -Sy archlinux-keyring manjaro-keyring >/dev/null 2>&1
 setcap cap_net_raw+p /usr/sbin/ping
 getent passwd builder >/dev/null && (userdel builder && rm -rf /home/builder && sed -i '/builder ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers)
 sudo systemctl daemon-reload
