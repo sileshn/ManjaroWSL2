@@ -14,8 +14,10 @@ figlet -t -k -f /usr/share/figlet/fonts/mini.flf "Welcome to ManjaroWSL2" | lolc
 echo -e "\033[33;7mDo not interrupt or close the terminal window till script finishes execution!!!\n\033[0m"
 
 echo -e ${grn}"Initializing and populating keyring..."${txtrst}
+rm -rf /etc/pacman.d/gnupg; 
 pacman-key --init >/dev/null 2>&1
 pacman-key --populate >/dev/null 2>&1
+pacman --noconfirm --needed -Sy archlinux-keyring >/dev/null 2>&1
 setcap cap_net_raw+p /usr/sbin/ping
 getent passwd builder >/dev/null && (userdel builder && rm -rf /home/builder && sed -i '/builder ALL=(ALL) NOPASSWD: ALL/d' /etc/sudoers)
 sudo systemctl daemon-reload
